@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3489916181436759793}
   - component: {fileID: 6208311121727671536}
   - component: {fileID: 4352398220153334036}
-  - component: {fileID: 114196493351839424}
+  - component: {fileID: 95252857994456762}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,19 +119,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.02
---- !u!114 &114196493351839424
-MonoBehaviour:
+--- !u!95 &95252857994456762
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7428474182461346974}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e55100bed6030ba4aa66fb826cca64b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  rb: {fileID: 6208311121727671536}
-  explosion: {fileID: 7428474182461346974, guid: 56f21eb3de0840a4c9e2e3303cee03c7,
-    type: 3}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7c36ac532eebf5b499db738004388784, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
