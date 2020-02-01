@@ -112,6 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &185969471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185969472}
+  m_Layer: 8
+  m_Name: ShootingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185969472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185969471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.135, y: -0.033, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1426930935}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &190013241
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4800,7 @@ Transform:
   m_LocalScale: {x: 2.40568, y: 2.40568, z: 2.40568}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &376415979
 GameObject:
@@ -5180,11 +5210,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793672966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.841, y: -1.182, z: 0}
+  m_LocalPosition: {x: -1.86, y: -1.15, z: 0}
   m_LocalScale: {x: 0.12098393, y: 0.12098393, z: 0.12098393}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1218209476
 GameObject:
@@ -5276,6 +5306,7 @@ GameObject:
   - component: {fileID: 1426930938}
   - component: {fileID: 1426930937}
   - component: {fileID: 1426930939}
+  - component: {fileID: 1426930940}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -5392,6 +5423,7 @@ Transform:
   - {fileID: 1320563422}
   - {fileID: 602412395}
   - {fileID: 510024132}
+  - {fileID: 185969472}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5484,6 +5516,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1426930940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426930931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2023c5426cdac4e40a5cc808a48628b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoing: {fileID: 185969472}
+  bulletPrefab: {fileID: 7428474182461346974, guid: 007fde22003eada48948ada47f59fb09,
+    type: 3}
 --- !u!1 &1811328205
 GameObject:
   m_ObjectHideFlags: 3
