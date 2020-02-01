@@ -15,6 +15,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -35,7 +36,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/NPC.cs" />
+        <option value="$PROJECT_DIR$/Assets/ItemSelected.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemSelector.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +122,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="28" key="#C#/0.0.1366.738/1366.-312.1920.1050@0.0.1366.738" timestamp="1580514246432" />
+    <state x="393" y="50" key="RiderGenerateDialog" timestamp="1580572037791">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="393" y="50" key="RiderGenerateDialog/0.0.1366.738/1366.-312.1920.1050@0.0.1366.738" timestamp="1580572037791" />
     <state x="184" y="7" key="SettingsEditor" timestamp="1580533918223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

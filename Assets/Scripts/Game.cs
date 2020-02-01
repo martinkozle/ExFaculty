@@ -26,11 +26,13 @@ public class Game : MonoBehaviour
 
     public Tilemap map;
 
+    public GameObject hotbarSelector;
+
     private bool canShoot = false;
 
     private int[] slots = new int[9];
 
-    private int selectedSlot = 1;
+    public int selectedSlot = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -105,6 +107,7 @@ public class Game : MonoBehaviour
                 {
                     map.SetTile(tilePos, null);
                     slots[3] = 1;
+                    hotbarSelector.GetComponent<ItemSelector>().GetItem(4);
                 }
             }
 
