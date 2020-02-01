@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public GameObject player;
     public CharacterController2D cont;
+    public Animator animator;
     private float horizontal;
     private int direction;
     private int health = 100;
@@ -27,7 +28,8 @@ public class Enemy : MonoBehaviour
     
     private void Die()
     {
-        Destroy(gameObject);
+        animator.SetBool("isAlive", false);
+        Destroy(gameObject, 0.5f);
     }
 
     private void FixedUpdate()
@@ -62,6 +64,5 @@ public class Enemy : MonoBehaviour
         {
             horizontal = 0f;
         }
-        Debug.Log(horizontal);
     }
 }

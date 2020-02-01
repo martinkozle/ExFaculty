@@ -133,7 +133,17 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-	
+	public int getDirection()
+	{
+		if (m_FacingRight)
+		{
+			return 1;
+		}
+		else
+		{
+			return -1;
+		}
+	}
 
 	public void Flip()
 	{
