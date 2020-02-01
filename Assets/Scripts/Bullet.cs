@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Destroy(gameObject,10f);
     }
 
     private void OnTriggerEnter2D(Collider2D info)
@@ -21,6 +22,9 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
        
     }
+    
+   
     // Update is called once per frame
    
 }
+
