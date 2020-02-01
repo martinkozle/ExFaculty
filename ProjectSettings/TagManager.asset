@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Entity
   - 
   - 
   - 
@@ -51,7 +51,7 @@ TagManager:
     uniqueID: 1912096963
     locked: 0
   - name: Entity
-    uniqueID: 4210608393
+    uniqueID: 1153133255
     locked: 0
   - name: Player
     uniqueID: 1553090709

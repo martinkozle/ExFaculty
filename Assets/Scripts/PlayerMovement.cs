@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
             //animator.SetBool("Crouched", false);
         }
+        
     }
 
     public void OnCrouch(bool crouched)
@@ -47,4 +48,5 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
+    
 }
