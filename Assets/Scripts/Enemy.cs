@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public CharacterController2D cont;
     private float horizontal;
     private int direction;
-    private int health = 10000000;
+    private int health = 100;
     private float distance;
     public float speed = 10f;
     public void takeDamage(int dmg)
