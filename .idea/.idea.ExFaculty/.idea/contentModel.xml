@@ -9,7 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="Bullet.cs" t="Include" />
           <e p="CharacterController2D.cs" t="Include" />
-          <e p="HeldWeapon.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
         </e>

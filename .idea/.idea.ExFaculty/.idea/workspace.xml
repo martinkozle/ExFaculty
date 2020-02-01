@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -26,6 +27,12 @@
         <option value="$PROJECT_DIR$/Assets/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/HeldWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/ItemCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HeldWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/HandPosition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
       </list>
     </option>
   </component>
@@ -81,7 +88,7 @@
       <workItem from="1580504670137" duration="2081000" />
       <workItem from="1580510669872" duration="20000" />
       <workItem from="1580513805525" duration="7678000" />
-      <workItem from="1580526097354" duration="2670000" />
+      <workItem from="1580526097354" duration="7836000" />
     </task>
     <servers />
   </component>

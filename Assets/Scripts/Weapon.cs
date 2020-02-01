@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     public Transform firePoing;
     public GameObject bulletPrefab;
-    
+    public GameObject inventory;
 
     // Update is called once per frame
     void Update()
@@ -20,6 +20,9 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoing.position, firePoing.rotation);
+        if (GetComponent<Inventory>().CanShoot())
+        {
+            Instantiate(bulletPrefab, firePoing.position, firePoing.rotation);
+        }
     }
 }
