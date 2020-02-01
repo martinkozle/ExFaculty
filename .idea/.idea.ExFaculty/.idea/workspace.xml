@@ -24,6 +24,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterController2D.cs" />
         <option value="$PROJECT_DIR$/Assets/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/HeldWeapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       </list>
     </option>
@@ -80,7 +81,7 @@
       <workItem from="1580504670137" duration="2081000" />
       <workItem from="1580510669872" duration="20000" />
       <workItem from="1580513805525" duration="7678000" />
-      <workItem from="1580526097354" duration="478000" />
+      <workItem from="1580526097354" duration="2670000" />
     </task>
     <servers />
   </component>

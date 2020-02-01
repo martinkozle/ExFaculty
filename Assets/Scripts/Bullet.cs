@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
 
     public float speed = 20f;
     public Rigidbody2D rb;
+    public GameObject explosion;
     void Start()
     {
         rb.velocity = transform.right * speed;
@@ -18,9 +19,9 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D info)
     {
         Debug.Log(info.name);
-        
+        GameObject tmpExp = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
-       
+        Destroy(tmpExp, 0.25f);
     }
     
    
