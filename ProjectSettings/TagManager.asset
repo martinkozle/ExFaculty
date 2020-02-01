@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Player
-  - Entity
+  - 
   - 
   - 
   - 
@@ -47,11 +47,11 @@ TagManager:
   - name: Tiles
     uniqueID: 897088257
     locked: 0
-  - name: Buildings
+  - name: Objects
     uniqueID: 1912096963
     locked: 0
   - name: Entity
-    uniqueID: 1153133255
+    uniqueID: 4210608393
     locked: 0
   - name: Player
     uniqueID: 1553090709
