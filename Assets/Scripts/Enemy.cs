@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject player;
+    private GameObject player;
     public CharacterController2D cont;
     public Animator animator;
     private float horizontal;
@@ -23,9 +23,13 @@ public class Enemy : MonoBehaviour
             Die();
         }
         
-        
     }
-    
+
+    private void Start()
+    {
+        player=GameObject.Find("Player");
+    }
+
     private void Die()
     {
         animator.SetBool("isAlive", false);
@@ -34,9 +38,8 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (distance<1)
+        if (distance<4)
         {
-            
             cont.Move(horizontal*Time.fixedDeltaTime,false,false);
             
         }
@@ -56,7 +59,7 @@ public class Enemy : MonoBehaviour
             
         }
 
-        if (distance<1)
+        if (distance<4)
         {
             horizontal =direction * speed;
         }

@@ -36,6 +36,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         slots[1] = 1;
+        slots[2] = 1;
         LowerHand();
     }
 
