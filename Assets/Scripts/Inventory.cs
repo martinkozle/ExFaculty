@@ -17,11 +17,14 @@ public class Inventory : MonoBehaviour
 
     private bool canShoot = false;
 
-    private int[] items = new int[9];
+    private int[] slots = new int[9];
+
+    private int selectedSlot = 1;
 
     // Start is called before the first frame update
     void Start()
     {
+        slots[1] = 1;
         LowerHand();
     }
 
@@ -51,27 +54,42 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown("1"))
         {
             LowerHand();
+            selectedSlot = 1;
         }
-        else if (Input.GetKeyDown("2"))
+        else if (Input.GetKeyDown("2") && slots[1] > 0)
         {
             LowerHand();
             RaiseHand();
             miningDrill.enabled = true;
+            selectedSlot = 2;
         }
-        else if (Input.GetKeyDown("3"))
+        else if (Input.GetKeyDown("3") && slots[2] > 0)
         {
             LowerHand();
             RaiseHand();
             laserGun.enabled = true;
             canShoot = true;
+            selectedSlot = 3;
+        }
+        else if (Input.GetKeyDown("4") && slots[3] > 0)
+        {
+            LowerHand();
+            RaiseHand();
+            
         }
 
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e") && selectedSlot == 2)
         {
             var tilePos = map.WorldToCell(new Vector2(
-                transform.position.x + GetComponent<CharacterController2D>().getDirection(),
+                transform.position.x + GetComponent<CharacterController2D>().getDirection() / 2.0f,
                 transform.position.y));
-            map.SetTile(tilePos, null);
+            if (map.GetTile(tilePos).name == "MeteorBlock")
+                map.SetTile(tilePos, null);
+            if (map.GetTile(tilePos).name == "Crate")
+            {
+                map.SetTile(tilePos, null);
+                slots[3] = 1;
+            }
         }
     }
 }
