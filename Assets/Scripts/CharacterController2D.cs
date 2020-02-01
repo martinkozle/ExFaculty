@@ -141,7 +141,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 		else
 		{
-			return 0;
+			return -1;
 		}
 	}
 

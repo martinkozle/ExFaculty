@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        if (GetComponent<Inventory>().CanShoot())
+        if (GetComponent<Game>().CanShoot())
         {
             Instantiate(bulletPrefab, firePoing.position, firePoing.rotation);
         }
