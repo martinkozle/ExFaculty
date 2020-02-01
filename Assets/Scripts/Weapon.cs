@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,14 +8,22 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     public Transform firePoing;
     public GameObject bulletPrefab;
-    public GameObject inventory;
+
+    private float timer;
+
+    private void Start()
+    {
+        timer = 0f;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        timer += Time.deltaTime;
+        if (Input.GetButtonDown("Fire1")&&timer>=0.45f)
         {
             Shoot();
+            timer = 0f;
         }
     }
 
