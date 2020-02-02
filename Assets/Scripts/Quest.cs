@@ -39,7 +39,7 @@ public class Quest : MonoBehaviour
     public GameObject questTracker;
     public GameObject textObject;
     private Dictionary<string, Task> tasks = new Dictionary<string, Task>();
-    private bool submitted = false;
+    private bool submitted = true;
 
     public bool IsSubmitted()
     {
@@ -49,6 +49,7 @@ public class Quest : MonoBehaviour
     public void RemoveTasks()
     {
         tasks = new Dictionary<string, Task>();
+        submitted = false;
         textObject.GetComponent<TextMeshProUGUI>().SetText("");
     }
 
@@ -98,7 +99,23 @@ public class Quest : MonoBehaviour
         return tasks.Values.ToList();
     }
 
+    public void DisplayQuest()
+    {
+        questTracker.GetComponent<SpriteRenderer>().enabled = true;
+        textObject.GetComponent<TextMeshProUGUI>().enabled = true;
+    }
+    public void HideQuest()
+    {
+        questTracker.GetComponent<SpriteRenderer>().enabled = false;
+        textObject.GetComponent<TextMeshProUGUI>().enabled = false;
+    }
+    
     public void Update()
     {
+    }
+
+    public void Start()
+    {
+        HideQuest();
     }
 }

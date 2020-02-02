@@ -28,6 +28,8 @@ public class Game : MonoBehaviour
 
     public GameObject hotbarSelector;
 
+    public NPC npc;
+
     private bool canShoot = false;
 
     private int[] slots = new int[9];
@@ -95,6 +97,7 @@ public class Game : MonoBehaviour
 
         if (Input.GetKeyDown("e"))
         {
+            npc.Talk();
             if (selectedSlot == 2)
             {
                 var tilePos = map.WorldToCell(new Vector2(

@@ -10053,7 +10053,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1426930931}
-  quest: {fileID: 2003034987}
+  quest1: {fileID: 1092396705}
+  quest2: {fileID: 1151618972}
+  quest3: {fileID: 1151812288}
+  questController: {fileID: 2003034987}
 --- !u!4 &668971309
 Transform:
   m_ObjectHideFlags: 0
@@ -11964,6 +11967,7 @@ MonoBehaviour:
   mfsRuined: {fileID: 132795207}
   map: {fileID: 193363236}
   hotbarSelector: {fileID: 881830604}
+  npc: {fileID: 668971308}
   selectedSlot: 1
 --- !u!1 &1478144632
 GameObject:
