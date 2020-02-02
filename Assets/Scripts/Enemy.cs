@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        player.GetComponent<Game>().GiveItems(4, 2);
         animator.SetBool("isAlive", false);
         Destroy(gameObject, 0.5f);
     }

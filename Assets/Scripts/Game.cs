@@ -28,6 +28,8 @@ public class Game : MonoBehaviour
 
     public GameObject hotbarSelector;
 
+    public Quest questController;
+
     public NPC npc;
 
     private bool canShoot = false;
@@ -36,11 +38,16 @@ public class Game : MonoBehaviour
 
     public int selectedSlot = 1;
 
+    public Weapon weapon;
+
+    public float timer;
+
     // Start is called before the first frame update
     void Start()
     {
         slots[1] = 1;
         LowerHand();
+        timer = 0f;
     }
 
     void LowerHand()
@@ -64,9 +71,23 @@ public class Game : MonoBehaviour
         return canShoot;
     }
 
+    public void GiveItems(int metalFrags, int magnets)
+    {
+        questController.IncreaseTaskProgress("Collect metal fragments", metalFrags);
+        questController.IncreaseTaskProgress("Collect magnets", magnets);
+    }
+
+    public void GiveLaser()
+    {
+        slots[2] = 1;
+        hotbarSelector.GetComponent<ItemSelector>().GetItem(3);
+    }
+    
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         if (Input.GetKeyDown("1"))
         {
             LowerHand();
@@ -98,6 +119,12 @@ public class Game : MonoBehaviour
         if (Input.GetKeyDown("e"))
         {
             npc.Talk();
+            if (selectedSlot == 3 && timer >= 0.45f)
+            {
+                weapon.Shoot();
+                timer = 0f;
+            }
+
             if (selectedSlot == 2)
             {
                 var tilePos = map.WorldToCell(new Vector2(
@@ -116,23 +143,36 @@ public class Game : MonoBehaviour
 
             if (selectedSlot == 4)
             {
-                SoundMagerScript.PlaySound("fix");
                 if (tmf.transform.position.x - 2.5 < transform.position.x &&
                     tmf.transform.position.x + 2.5 > transform.position.x &&
-                    tmf.transform.position.y > transform.position.y)
+                    tmf.transform.position.y > transform.position.y &&
+                    questController.ContainsTask("Repair TMF") &&
+                    !questController.IsComplete("Repair TMF"))
                 {
+                    SoundMagerScript.PlaySound("fix");
                     tmf.enabled = true;
                     tmfRuined.enabled = false;
+                    questController.UpdateTaskProgress("Repair TMF", 1);
                 }
 
                 if (mfs.transform.position.x - 2.5 < transform.position.x &&
                     mfs.transform.position.x + 2.5 > transform.position.x &&
-                    mfs.transform.position.y > transform.position.y)
+                    mfs.transform.position.y > transform.position.y &&
+                    questController.ContainsTask("Repair MFS/FEIT") &&
+                    !questController.IsComplete("Repair MFS/FEIT"))
                 {
+                    SoundMagerScript.PlaySound("fix");
                     mfs.enabled = true;
                     mfsRuined.enabled = false;
+                    questController.UpdateTaskProgress("Repair MFS/FEIT", 1);
                 }
             }
         }
+        
+    }
+
+    IEnumerator Sleep(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
     }
 }

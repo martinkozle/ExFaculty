@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking.NetworkSystem;
 
 public class Task
 {
@@ -53,6 +54,16 @@ public class Quest : MonoBehaviour
         textObject.GetComponent<TextMeshProUGUI>().SetText("");
     }
 
+    public bool ContainsTask(string taskName)
+    {
+        return tasks.ContainsKey(taskName);
+    }
+
+    public bool IsComplete(string taskName)
+    {
+        return tasks[taskName].IsComplete();
+    }
+
     public void AddTask(string taskName, int amount)
     {
         tasks[taskName] = new Task(taskName, amount);
@@ -66,19 +77,26 @@ public class Quest : MonoBehaviour
         {
             sb.Append(task.Value.taskName + "\t" + task.Value.progress + "/" + task.Value.total + "\n");
         }
+
         textObject.GetComponent<TextMeshProUGUI>().SetText(sb.ToString());
     }
 
     public void UpdateTaskProgress(string task, int amount)
     {
-        tasks[task].UpdateProgress(amount);
-        SetText();
+        if (tasks.ContainsKey(task))
+        {
+            tasks[task].UpdateProgress(amount);
+            SetText();
+        }
     }
 
     public void IncreaseTaskProgress(string task, int amount)
     {
-        tasks[task].IncreaseProgress(amount);
-        SetText();
+        if (tasks.ContainsKey(task))
+        {
+            tasks[task].IncreaseProgress(amount);
+            SetText();
+        }
     }
 
     public bool IsComplete()
@@ -104,12 +122,13 @@ public class Quest : MonoBehaviour
         questTracker.GetComponent<SpriteRenderer>().enabled = true;
         textObject.GetComponent<TextMeshProUGUI>().enabled = true;
     }
+
     public void HideQuest()
     {
         questTracker.GetComponent<SpriteRenderer>().enabled = false;
         textObject.GetComponent<TextMeshProUGUI>().enabled = false;
     }
-    
+
     public void Update()
     {
     }

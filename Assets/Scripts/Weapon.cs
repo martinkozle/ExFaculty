@@ -19,20 +19,17 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        if (Input.GetButtonDown("Fire1")&&timer>=0.45f)
+        /*timer += Time.deltaTime;
+        if (Input.GetButtonDown("Fire1") && timer >= 0.45f)
         {
-            SoundMagerScript.PlaySound("shoot");
             Shoot();
             timer = 0f;
-        }
+        }*/
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        if (GetComponent<Game>().CanShoot())
-        {
-            Instantiate(bulletPrefab, firePoing.position, firePoing.rotation);
-        }
+        SoundMagerScript.PlaySound("shoot");
+        Instantiate(bulletPrefab, firePoing.position, firePoing.rotation);
     }
 }
