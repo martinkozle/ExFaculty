@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundMagerScript : MonoBehaviour
 {
 
-    public static AudioClip jumpSound, shootSound, fixSound,deathSound;
+    public static AudioClip jumpSound, shootSound, fixSound,deathSound,drillMusic;
     public static AudioSource audioSource;
         
     // Start is called before the first frame update
@@ -15,6 +15,7 @@ public class SoundMagerScript : MonoBehaviour
         shootSound = Resources.Load<AudioClip>("shoot");
         fixSound = Resources.Load<AudioClip>("fix");
         deathSound = Resources.Load<AudioClip>("death");
+        drillMusic = Resources.Load<AudioClip>("drill");
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -40,6 +41,9 @@ public class SoundMagerScript : MonoBehaviour
                 break;
             case "death":
                 audioSource.PlayOneShot(deathSound);
+                break;
+            case "drill":
+                audioSource.PlayOneShot(drillMusic);
                 break;
                 
         }

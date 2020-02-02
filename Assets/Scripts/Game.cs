@@ -24,7 +24,11 @@ public class Game : MonoBehaviour
 
     public SpriteRenderer mfsRuined;
 
+    public SpriteRenderer endScreen;
+
     public Tilemap map;
+
+    public Transform server;
 
     public GameObject hotbarSelector;
 
@@ -133,19 +137,24 @@ public class Game : MonoBehaviour
         else if (Input.GetKeyDown("6") && slots[5] > 0)
         {
             LowerHand();
-            selectedSlot = 5;
+            selectedSlot = 6;
         }
         else if (Input.GetKeyDown("7") && slots[6] > 0)
         {
             LowerHand();
-            selectedSlot = 6;
+            selectedSlot = 7;
         }
         else if (Input.GetKeyDown("8") && slots[7] > 0)
         {
             LowerHand();
-            selectedSlot = 7;
+            selectedSlot = 8;
         }
 
+        if (Input.GetKeyDown("k"))
+        {
+            endScreen.enabled = true;
+        }
+        
         if (Input.GetKeyDown("e"))
         {
             npc.Talk();
@@ -157,6 +166,7 @@ public class Game : MonoBehaviour
 
             if (selectedSlot == 2)
             {
+                SoundMagerScript.PlaySound("drill");
                 var tilePos = map.WorldToCell(new Vector2(
                     transform.position.x + GetComponent<CharacterController2D>().getDirection() / 2.0f,
                     transform.position.y));
