@@ -9301,7 +9301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 365897938}
   - component: {fileID: 365897937}
-  - component: {fileID: 365897939}
   m_Layer: 0
   m_Name: MFS
   m_TagString: Untagged
@@ -9371,25 +9370,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &365897939
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365897936}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 00250f6293165414cafddeeb4a4c1961, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &385332066 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7011975724455850242, guid: 4523612d989275b41b5404909b163d63,
@@ -12031,10 +12011,8 @@ MonoBehaviour:
   hammer: {fileID: 1353255028}
   tmf: {fileID: 2138021830}
   tmfRuined: {fileID: 1343770021}
-  tmfAnimator: {fileID: 0}
   mfs: {fileID: 365897937}
   mfsRuined: {fileID: 132795207}
-  mfsAnimator: {fileID: 0}
   map: {fileID: 193363236}
   hotbarSelector: {fileID: 881830604}
   questController: {fileID: 2003034987}
@@ -13323,7 +13301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2138021831}
   - component: {fileID: 2138021830}
-  - component: {fileID: 2138021832}
   m_Layer: 0
   m_Name: TMF
   m_TagString: Untagged
@@ -13393,22 +13370,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2138021832
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138021829}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9debe8eed1be8d446b32e332a9a3d6b3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
