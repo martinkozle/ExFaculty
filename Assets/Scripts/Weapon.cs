@@ -22,6 +22,7 @@ public class Weapon : MonoBehaviour
         timer += Time.deltaTime;
         if (Input.GetButtonDown("Fire1")&&timer>=0.45f)
         {
+            SoundMagerScript.PlaySound("shoot");
             Shoot();
             timer = 0f;
         }

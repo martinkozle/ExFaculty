@@ -113,6 +113,7 @@ public class Game : MonoBehaviour
 
             if (selectedSlot == 4)
             {
+                SoundMagerScript.PlaySound("fix");
                 if (tmf.transform.position.x - 2.5 < transform.position.x &&
                     tmf.transform.position.x + 2.5 > transform.position.x &&
                     tmf.transform.position.y > transform.position.y)
