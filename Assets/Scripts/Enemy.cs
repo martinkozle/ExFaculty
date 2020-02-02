@@ -19,8 +19,8 @@ public class Enemy : MonoBehaviour
         health -= dmg;
         if (health <= 0)
         {
-            Debug.Log(gameObject.name+"is dead");
-            Die();
+           // Debug.Log(gameObject.name+"is dead");
+           Die();
         }
         
         
@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        SoundMagerScript.PlaySound("death");
         animator.SetBool("isAlive", false);
         Destroy(gameObject, 0.5f);
     }
