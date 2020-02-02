@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\martinkozle\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\martinkozle\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ExFaculty.-787399695.00" t="ExcludeRecursive" />
-    <e p="C:\Users\martinkozle\Documents\Programming\Unity\ExFaculty" t="IncludeRecursive">
+    <e p="C:\Users\Tomislav\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Tomislav\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_ExFaculty.-513781604.00" t="ExcludeRecursive" />
+    <e p="D:\Custom made programs\Unity Stuff\ExFaculty" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
@@ -12,6 +12,8 @@
           <e p="Enemy.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="Game.cs" t="Include" />
+          <e p="ItemSelector.cs" t="Include" />
+          <e p="NPC.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
         </e>

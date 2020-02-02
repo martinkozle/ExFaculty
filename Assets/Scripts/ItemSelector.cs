@@ -14,7 +14,7 @@ public class ItemSelector : MonoBehaviour
     void Start()
     {
         startingX = transform.position.x;
-        Debug.Log(startingX);
+//        Debug.Log(startingX);
         startingX = transform.position.y;
     }
 
