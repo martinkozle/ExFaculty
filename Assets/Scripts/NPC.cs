@@ -97,6 +97,7 @@ public class NPC : MonoBehaviour
             }
             else if (currentQuest == 2)
             {
+                player.GetComponent<Game>().GiveHardDisk();
                 questController.RemoveTasks();
                 questController.AddTask("Deliver the Master Hard Drive to the System Administrator", 1);
                 quest3.enabled = true;

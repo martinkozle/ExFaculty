@@ -74,13 +74,23 @@ public class Game : MonoBehaviour
     public void GiveItems(int metalFrags, int magnets)
     {
         questController.IncreaseTaskProgress("Collect metal fragments", metalFrags);
+        slots[4] += metalFrags;
+        hotbarSelector.GetComponent<ItemSelector>().GetItem(5);
         questController.IncreaseTaskProgress("Collect magnets", magnets);
+        slots[5] += magnets;
+        hotbarSelector.GetComponent<ItemSelector>().GetItem(6);
     }
 
     public void GiveLaser()
     {
         slots[2] = 1;
         hotbarSelector.GetComponent<ItemSelector>().GetItem(3);
+    }
+
+    public void GiveHardDisk()
+    {
+        slots[6] = 1;
+        hotbarSelector.GetComponent<ItemSelector>().GetItem(7);
     }
     
     // Update is called once per frame
@@ -114,6 +124,26 @@ public class Game : MonoBehaviour
             RaiseHand();
             hammer.enabled = true;
             selectedSlot = 4;
+        }
+        else if (Input.GetKeyDown("5") && slots[4] > 0)
+        {
+            LowerHand();
+            selectedSlot = 5;
+        }
+        else if (Input.GetKeyDown("6") && slots[5] > 0)
+        {
+            LowerHand();
+            selectedSlot = 5;
+        }
+        else if (Input.GetKeyDown("7") && slots[6] > 0)
+        {
+            LowerHand();
+            selectedSlot = 6;
+        }
+        else if (Input.GetKeyDown("8") && slots[7] > 0)
+        {
+            LowerHand();
+            selectedSlot = 7;
         }
 
         if (Input.GetKeyDown("e"))
