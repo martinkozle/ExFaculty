@@ -28,6 +28,12 @@ public class Game : MonoBehaviour
 
     public GameObject hotbarSelector;
 
+    public Quest questController;
+
+    public NPC npc;
+
+    public Transform server;
+
     private bool canShoot = false;
 
     private int[] slots = new int[9];
@@ -127,6 +133,15 @@ public class Game : MonoBehaviour
                 {
                     mfs.enabled = true;
                     mfsRuined.enabled = false;
+                }
+            }
+
+            if (selectedSlot == 7)
+            {
+                if (Mathf.Abs(transform.position.x - server.position.x) < 1 &&
+                    Mathf.Abs(transform.position.y - server.position.y) < 1)
+                {
+                    
                 }
             }
         }
