@@ -53,6 +53,9 @@ TagManager:
   - name: Entity
     uniqueID: 4210608393
     locked: 0
+  - name: UFO
+    uniqueID: 3243237777
+    locked: 0
   - name: Player
     uniqueID: 1553090709
     locked: 0
